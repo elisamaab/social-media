@@ -22,7 +22,8 @@ body {
   display: flex;
   padding: 3em;
   /** Add challenge code after here. **/
-
+  justify-content: space-between;
+  align-items: center;
 }
 
 #titles h1 {
@@ -61,7 +62,7 @@ body {
   margin: 0.5em 0;
   font-size: 1em;
   padding: 0 0.5em;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 /* Position relative tutorial. */
@@ -88,7 +89,9 @@ body {
   margin-right: auto;
   width: 960px;
   /** Add challenge code after here. **/
-
+  position: relative;
+  left: -50px;
+  top: 20px;
 }
 
 /* Position absolute tutorial. */
@@ -108,6 +111,7 @@ body {
   background-color: #FFF;
   margin: 3em auto;
   /** Add challenge code after here. **/
+  position: relative;
 }
 
 #message-box > h2 {
@@ -124,7 +128,9 @@ body {
   text-align: center;
   background: pink;
   /** Challenge code after here. **/
-
+  position: absolute;
+  top: -20px;
+  right: 0px;
 }
 
 /* Position Fixed Tutorial */
@@ -136,6 +142,47 @@ body {
   text-align: center;
   background-color: #BBB;
   color: #FFF;
-  z-index: 100;
+  z-index: 2;
   /** Challenge code after here. **/
+  bottom: 0;
+  right: 0;
+  position: fixed;
 }
+
+/** Tutorial on classes vs id **/
+/** Watch video from Nov. 11th, 2017 **/
+#nav-bar {
+  height: 60px;
+  width: 100%;
+  background-color: lightcoral;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 3em;
+  padding-right: 3em;
+  position: fixed;
+  z-index: 3;
+}
+
+.cool-button {
+  color: aliceblue;
+  text-decoration: none;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#active-button {
+  text-decoration: underline;
+}
+
+/** Tutorial on pseudo classes. **/
+.cool-button:hover {
+  text-decoration: line-through;
+}
+
+/** For user feedback. Pseudo class tutorial. **/
+/** Check ruleset in line 59 too. */
+#sign-up form input:focus {
+  background: blue;
+}
+
